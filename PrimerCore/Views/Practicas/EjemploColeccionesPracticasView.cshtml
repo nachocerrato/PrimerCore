@@ -1,0 +1,14 @@
+﻿@model List<Comic>
+<h1>Ejemplo Colecciones View</h1>
+
+
+<table class="table table-bordered">
+    @foreach (Comic comic in Model)
+            {
+                <tr>
+                    <td>@comic.Nombre</td>
+                    <td>@comic.Descripcion</td>
+                    <td><img src="@comic.Imagen" /></td>
+                </tr>
+            }
+</table>

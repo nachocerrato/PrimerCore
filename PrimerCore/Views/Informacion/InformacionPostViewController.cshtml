@@ -1,0 +1,25 @@
+﻿<h1>
+    Enviar Información POST
+    </h1>
+<a asp-controller="Informacion"
+   asp-action="Index">
+    Volver al menú
+</a>
+<hr/>
+
+<form method="post">
+    <label>Nombre: </label>
+    <input type="text" name="nombre"
+           class="form-control"/><br/>
+    <label>Edad: </label>
+    <input type="number" name="edad"
+           class="form-control" /><br />
+    <button class="btn btn-info">
+        Enviar datos
+    </button>
+</form>
+<hr />
+
+<h1 style="color:forestgreen">
+    @ViewBag.Nombre, @ViewBag.Edad
+</h1>

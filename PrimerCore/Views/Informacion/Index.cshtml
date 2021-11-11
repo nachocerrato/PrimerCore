@@ -1,0 +1,31 @@
+﻿<h1>Menú información entre componentes MVC</h1>
+
+<ul class="list-group">
+    <li class="list-group-item">
+        <a asp-controller="Informacion"
+           asp-action="InformacionControllerView">
+         Enviar Info Controller -- View
+
+        </a>
+    </li>
+    <li class="list-group-item">
+        <a asp-controller="Informacion"
+           asp-action="InformacionControllerViewModel">
+            Enviar Model Controller -- View
+        </a>
+    </li>
+    <li class="list-group-item">
+        <a asp-controller="Informacion"
+           asp-action="InformacionGetViewController"
+           asp-route-nombre="Alumno"
+           asp-route-edad=27>
+            Enviar Informacion GET View Controller
+        </a>
+    </li>
+    <li class="list-group-item">
+        <a asp-controller="Informacion"
+           asp-action="InformacionPostViewController">
+            Enviar Informacion POST View Controller
+        </a>
+    </li>
+</ul>
