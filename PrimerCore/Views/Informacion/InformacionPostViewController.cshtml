@@ -1,4 +1,6 @@
-﻿<h1>
+﻿@model Persona
+
+<h1>
     Enviar Información POST
     </h1>
 <a asp-controller="Informacion"
@@ -20,6 +22,10 @@
 </form>
 <hr />
 
-<h1 style="color:forestgreen">
-    @ViewBag.Nombre, @ViewBag.Edad
+@if (Model != null)
+{
+    <h1 style="color:forestgreen">
+    @Model.Nombre, @Model.Edad
 </h1>
+<h2>@Model.Email</h2>
+}

@@ -56,10 +56,21 @@ namespace PrimerCore.Controllers
         //tenemos que crear un método con el mismo nombre que la vista
         //pero con la decoración [HttpPost]
         [HttpPost]
-        public IActionResult InformacionPostViewController(String cajanombre, int cajaedad)
+        public IActionResult InformacionPostViewController(Persona persona)
         {
-            ViewBag.Nombre = cajanombre;
-            ViewBag.Edad = cajaedad;
+
+            return View(persona);
+        }
+
+        [HttpGet]
+        public IActionResult SumaNumerosPostView()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult SumaNumerosPostView(int num1, int num2)
+        {
             return View();
         }
     }
