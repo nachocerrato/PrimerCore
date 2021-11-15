@@ -62,16 +62,6 @@ namespace PrimerCore.Controllers
             return View(persona);
         }
 
-        [HttpGet]
-        public IActionResult SumaNumerosPostView()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult SumaNumerosPostView(int num1, int num2)
-        {
-            return View();
-        }
+        
     }
 }

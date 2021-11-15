@@ -45,5 +45,30 @@ namespace PrimerCore.Controllers
 
             return View(comics);
         }
+
+        [HttpGet]
+        public IActionResult SumaNumerosPostView()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult SumaNumerosPostView(int num1, int num2, int total)
+        {
+            ViewBag.Numero1 = num1;
+            ViewBag.Numero2 = num2;
+            ViewBag.Total = num1 + num2;
+
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult SumaNumerosGetView(int nume1, int nume2, int totale)
+        {
+            ViewBag.Numero1 = nume1;
+            ViewBag.Numero2 = nume2;
+            ViewBag.Total = nume1 + nume2;
+            return View();
+        }
     }
 }
